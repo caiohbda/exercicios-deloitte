@@ -1,4 +1,4 @@
-package exercicios.aula02;
+package exercicioslide.aula02;
 
 public class Produto {
     private int preco;
@@ -8,10 +8,10 @@ public class Produto {
     }
 
     public double aplicarDesconto(double desconto) {
-      double precoComDesconto = this.preco * (desconto/100);
-      precoComDesconto = this.preco - precoComDesconto;
+      double descontoProduto = this.preco * (desconto/100);
+      double precoComDesconto = this.preco - descontoProduto;
       System.out.println(precoComDesconto);
-       return precoComDesconto;
+      return precoComDesconto;
     }
 
 }

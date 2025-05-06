@@ -1,4 +1,4 @@
-package exercicios.aula02;
+package exercicioslide.aula02;
 
 public class Pessoa {
     private String nome;

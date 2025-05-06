@@ -1,4 +1,4 @@
-package exercicios.aula01;
+package exercicioslide.aula01;
 
 public class Exercicio4 {
     public void tabuadacinco() {

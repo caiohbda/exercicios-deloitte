@@ -48,21 +48,19 @@ public class Pessoa {
         this.peso = peso;
     }
 
-    public int verificarIdade(int idade) {
-        if (idade >= 18) {
+    public void verificarIdade(Pessoa pessoa) {
+        if (pessoa.idade >= 18) {
             System.out.println("maior de idade");
         } else {
             System.out.println("menor de idade");
         }
-        System.out.println(idade);
-        return idade;
     }
 
-    public void compararIdades(int idade, int idade2, String nome, String nome2) {
-        if(idade > idade2) {
-            System.out.println(nome + " tem a idade superior");
-        } else if(idade2 > idade) {
-            System.out.println(nome2 + " tem a idade superior");
+    public void compararIdades(Pessoa pessoa1, Pessoa pessoa2) {
+        if(pessoa1.idade > pessoa2.idade) {
+            System.out.println(pessoa1.nome + " tem a idade superior");
+        } else if(pessoa2.idade > pessoa1.idade) {
+            System.out.println(pessoa2.nome + " tem a idade superior");
         } else {
             System.out.println("os dois tem idades iguais.");
         }

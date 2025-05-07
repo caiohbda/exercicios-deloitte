@@ -1,5 +1,6 @@
 package frotaveiculos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Frota {
@@ -8,6 +9,27 @@ public class Frota {
 
     public Frota(List<Veiculo> veiculos, List<Motorista> motoristas) {
         this.veiculos = veiculos;
+        this.motoristas = motoristas;
+    }
+
+    public Frota() {
+        veiculos = new ArrayList<>();
+        motoristas = new ArrayList<>();
+    }
+
+    public List<Veiculo> getVeiculos() {
+        return veiculos;
+    }
+
+    public void setVeiculos(List<Veiculo> veiculos) {
+        this.veiculos = veiculos;
+    }
+
+    public List<Motorista> getMotoristas() {
+        return motoristas;
+    }
+
+    public void setMotoristas(List<Motorista> motoristas) {
         this.motoristas = motoristas;
     }
 
@@ -22,12 +44,12 @@ public class Frota {
     public void listar_frota() {
         System.out.println("Lista de veiculos");
         for (Veiculo veiculo: veiculos){
-            System.out.println(veiculo);
+            System.out.println(veiculo.exibir_info());
         }
 
         System.out.println("\nLista de Motoristas");
         for(Motorista motorista: motoristas) {
-            System.out.println(motorista);
+            System.out.println(motorista.toString());
         }
     }
 }

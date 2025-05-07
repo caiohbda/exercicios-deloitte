@@ -6,11 +6,11 @@ public class Veiculo {
     private String ano;
     private double velocidade;
 
-    public Veiculo(String marca, String modelo, String ano) {
+    public Veiculo(String marca, String modelo, String ano, double velocidade) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
-        this.velocidade = 0;
+        this.velocidade = velocidade >= 0 ? velocidade : 0;
     }
 
     public String getMarca() {
@@ -42,20 +42,25 @@ public class Veiculo {
     }
 
     public void setVelocidade(double velocidade) {
-        this.velocidade = velocidade;
+        if (velocidade >= 0) {
+            this.velocidade = velocidade;
+        } else {
+            System.out.println("Velocidade não pode ser negativa.");
+        }
     }
 
     public void acelerar() {
-        System.out.println("acelerou 10km/h");
-        velocidade = velocidade + 10;
+        System.out.println("Acelerou 10km/h.");
+        velocidade += 10;
     }
 
     public void frear() {
-        if (velocidade <= 0){
-            System.out.println("o veiculo esta parado");
+        if (velocidade <= 0) {
+            System.out.println("O veículo já está parado.");
+        } else {
+            System.out.println("Freou... reduziu 10km/h.");
+            velocidade -= 10;
         }
-        System.out.println("freiou... reduziu 10km/h");
-        velocidade = velocidade - 10;
     }
 
     public String exibir_info() {
@@ -64,6 +69,6 @@ public class Veiculo {
                 ", modelo='" + modelo + '\'' +
                 ", ano='" + ano + '\'' +
                 ", velocidade=" + velocidade +
-                '}';
+                ',';
     }
 }

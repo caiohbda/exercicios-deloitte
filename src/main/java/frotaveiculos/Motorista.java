@@ -47,12 +47,17 @@ public class Motorista {
         System.out.println("dirigindo...");
     }
 
-    public String exibir_info() {
-        String veiculoInfo = (veiculo_atual != null) ? ", veiculo_atual=" + veiculo_atual.exibir_info() : "";
+    public String toString() {
+        String veiculoInfo = (veiculo_atual != null) ? ", Veiculo atual = " + veiculo_atual.toString() : "";
         return "Motorista{" +
                 "nome='" + nome + '\'' +
                 ", cnh='" + cnh + '\'' +
                 veiculoInfo +
                 '}';
+    }
+
+    public void mostrar_info() {
+        String veiculoInfo = (veiculo_atual != null) ? ", Veiculo atual = " + veiculo_atual.toString() : "";
+        System.out.println(toString());
     }
 }

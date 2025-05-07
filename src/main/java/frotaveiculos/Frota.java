@@ -44,7 +44,7 @@ public class Frota {
     public void listar_frota() {
         System.out.println("Lista de veiculos");
         for (Veiculo veiculo: veiculos){
-            System.out.println(veiculo.exibir_info());
+            System.out.println(veiculo.toString());
         }
 
         System.out.println("\nLista de Motoristas");

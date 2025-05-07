@@ -17,8 +17,7 @@ public class Caminhao extends Veiculo{
         this.capacidade_carga = capacidade_carga;
     }
 
-    @Override
     public String exibir_info() {
-        return super.exibir_info() + " capacidade_carga=" + capacidade_carga + "}";
+        return super.toString() + " capacidade_carga=" + capacidade_carga + "}";
     }
 }

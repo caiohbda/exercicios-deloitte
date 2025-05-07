@@ -14,7 +14,8 @@ public class Main {
         frota.adicionar_motorista(motorista2);
         frota.adicionar_veiculo(carro);
         frota.adicionar_veiculo(caminhao);
-        System.out.println(motorista.exibir_info());
+        frota.listar_frota();
+
     }
 }
 

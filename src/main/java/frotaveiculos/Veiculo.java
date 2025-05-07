@@ -63,12 +63,16 @@ public class Veiculo {
         }
     }
 
-    public String exibir_info() {
+    public String toString() {
         return "Veiculo{" +
                 "marca='" + marca + '\'' +
                 ", modelo='" + modelo + '\'' +
                 ", ano='" + ano + '\'' +
                 ", velocidade=" + velocidade +
-                ',';
+                '}';
+    }
+
+    public void mostrar_info() {
+        System.out.println(toString());
     }
 }

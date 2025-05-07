@@ -16,8 +16,7 @@ public class Carro extends Veiculo {
         this.num_portas = num_portas;
     }
 
-    @Override
     public String exibir_info() {
-        return super.exibir_info() + " num_portas=" + num_portas + "}";
+        return super.toString() + " num_portas=" + num_portas + "}";
     }
 }
